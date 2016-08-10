@@ -1,0 +1,32 @@
+{
+  "name": "notes",
+  "version": "0.0.1",
+  "description": "creative writing aid that helps construct narratives from fragmentary or episodic writings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "creative",
+    "writing",
+    "notes",
+    "stories",
+    "narrative",
+    "ideas"
+  ],
+  "author": "Marque Reavley <mrqrvly@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
+    "gulp-live-server": "0.0.30"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.0",
+    "fs": "0.0.2"
+  }
+}
