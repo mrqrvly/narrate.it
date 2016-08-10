@@ -3,11 +3,11 @@
 
 //  Dependencies
 //  ------------
-var express = require('express'),
-    app = express(),
-    exphbs = require('express-handlebars'),
-    session = require('express-session'),
-    fs = require('fs'),
+var express    = require('express'),
+    app        = express(),
+    exphbs     = require('express-handlebars'),
+    session    = require('express-session'),
+    fs         = require('fs'),
     bodyParser = require('body-parser');
 
 //  Set up handlebars view engine
@@ -24,10 +24,10 @@ app.set('views', __dirname + '/views');
 //  Configures a user session
 //  -------------------------
 app.use(session({
-  name: 'narrateit',
-  resave: false,
+  name:              'narrateit',
+  resave:            false,
   saveUninitialized: false,
-  secret: 'dp98q3jeoasdn983u4oijaekjf'
+  secret:            'dp98q3jeoasdn983u4oijaekjf'
 }));
 
 //  Serve static files
