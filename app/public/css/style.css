@@ -50,6 +50,7 @@
   float: left;
   width: 100%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-12:last-child,
 .block-12:last-child {
@@ -68,6 +69,7 @@
   float: left;
   width: 91.41666667%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-11:last-child,
 .block-11:last-child {
@@ -86,6 +88,7 @@
   float: left;
   width: 82.83333333%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-10:last-child,
 .block-10:last-child {
@@ -104,6 +107,7 @@
   float: left;
   width: 74.25%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-9:last-child,
 .block-9:last-child {
@@ -122,6 +126,7 @@
   float: left;
   width: 65.66666667%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-8:last-child,
 .block-8:last-child {
@@ -140,6 +145,7 @@
   float: left;
   width: 57.08333333%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-7:last-child,
 .block-7:last-child {
@@ -158,6 +164,7 @@
   float: left;
   width: 48.5%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-6:last-child,
 .block-6:last-child {
@@ -176,6 +183,7 @@
   float: left;
   width: 39.91666667%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-5:last-child,
 .block-5:last-child {
@@ -194,6 +202,7 @@
   float: left;
   width: 31.33333333%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-4:last-child,
 .block-4:last-child {
@@ -212,6 +221,7 @@
   float: left;
   width: 22.75%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-3:last-child,
 .block-3:last-child {
@@ -230,6 +240,7 @@
   float: left;
   width: 14.16666667%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-2:last-child,
 .block-2:last-child {
@@ -248,6 +259,7 @@
   float: left;
   width: 5.58333333%;
   margin-right: 3%;
+  text-align: center;
 }
 .col-1:last-child,
 .block-1:last-child {

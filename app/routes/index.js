@@ -5,7 +5,7 @@ var express  = require('express'),
 
 // GET - '/' - get splash page with login and signup
 router.get('/', function(req, res, next) {
-  res.render('users');
+  res.render('index');
   res.send('You made it to the index page.')
 });
 

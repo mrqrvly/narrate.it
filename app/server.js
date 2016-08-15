@@ -8,7 +8,8 @@ var express    = require('express'),
     app        = express(),
     session    = require('express-session'),
     fs         = require('fs'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    passport   = require('passport');
 
 
 //  Configures a user session

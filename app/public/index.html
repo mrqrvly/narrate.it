@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="storyu">
 
 <head>
   <title>story.u</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type=""text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
-  <script type="text/javascript" src="js/splash.js"></script>
-  <script type="text/javascript" src="js/dashboard.js"></script>
-  <script type="text/javascript" src="js/stories.js"></script>
 </head>
 
-<body>
+<body ng-controller="testController">
   <header></header>
 
   <main>
     <div class="container">
+      
+      <!-- - - - - - - TITLE TEXT - - - - - - -->
       <div class="row">
         <div class="col-12">
           <div class="title-text">
@@ -24,17 +23,21 @@
         </div>
       </div>
 
+      <!-- - - - - - - LOGO IMAGE - - - - - - -->
       <div class="row">
         <div class="col-12">
           <img class="feather-square" src="/img/feather-square.png" />
         </div>
       </div>
 
+
+
+      <!-- - - - - - - LOGIN BLOCK - - - - - - -->
       <div class="row">
         <div class="col-12">
-          <div class="login-wrapper" ng-controller="loginController">
+          <div class="login-wrapper">
             <h3>LOGIN to begin your story...</h3>
-              <form>
+              <form name="loginForm" ng-controller="loginController" novalidate>
               <input type="text" name="username" placeholder="username">
               <input type="text" name="password" placeholder="password">
               <button type="submit">Login</button>
@@ -43,12 +46,15 @@
         </div>
       </div>
 
+
+
+      <!-- - - - - - - SIGNUP BLOCK - - - - - - -->
       <div class="row">
         <div class="col-12">
-          <div class="signup-wrapper" ng-controller="signupController">
+          <div class="signup-wrapper">
             <h3>Not a member?</h3>
             <h3>SIGNUP!</h3>
-            <form>
+            <form name="signupForm" ng-controller="signupController" novalidate>
               <input type="text" name="firstname" placeholder="First name">
               <input type="text" name="lastname" placeholder="Last name">
               <input type="email" name="email"  placeholder="Email address">
@@ -59,6 +65,9 @@
           </div>
         </div>
       </div>
+
+
+
     </div>
   </main>
 
