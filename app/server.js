@@ -11,11 +11,6 @@ var express    = require('express'),
     bodyParser = require('body-parser');
 
 
-//  Serve static HTML instead of template engine
-//  --------------------------------------------
-app.use(express.static(__dirname + '/public'));
-
-
 //  Configures a user session
 //  -------------------------
 app.use(session({
@@ -34,13 +29,14 @@ app.use(express.static(__dirname + '/public'));
 //  --------------------------
 require('./db/database');
 
+var splash = require('./routes/index'),
+    users  = require('./routes/users');
 
 //  Mount the controllers for use
 //  -----------------------------
-app.use('/?', require('./controllers/authentication'));
-// app.use('/notes/?', require('./controllers/notes'));
-// app.use('/photos/?', require('./controllers/photos'));
-// app.use('/users/?', require('./controllers/users'));
+app.use('/?', splash);
+app.use('/users', users);
+
 
 
 //  Start the server and listen at local port

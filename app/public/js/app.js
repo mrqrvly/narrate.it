@@ -1,7 +1,9 @@
 console.log('app.js is wired up');
 
+
+
 (function() {
-  var app = angular.module('storyme', []);
+  var app = angular.module('story.u', []);
 
 
   app.controller('loginController', function() {

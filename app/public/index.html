@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Story.U</title>
+  <title>story.u</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type=""text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
@@ -32,11 +32,31 @@
 
       <div class="row">
         <div class="col-12">
-          <form>
-            <h2>LOGIN to begin your story...</h2>
-            <input type="text" name="username" placeholder="username">
-            <input type="text" name="password" placeholder="password">
-          </form>
+          <div class="login-wrapper" ng-controller="loginController">
+            <h3>LOGIN to begin your story...</h3>
+              <form>
+              <input type="text" name="username" placeholder="username">
+              <input type="text" name="password" placeholder="password">
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="signup-wrapper" ng-controller="signupController">
+            <h3>Not a member?</h3>
+            <h3>SIGNUP!</h3>
+            <form>
+              <input type="text" name="firstname" placeholder="First name">
+              <input type="text" name="lastname" placeholder="Last name">
+              <input type="email" name="email"  placeholder="Email address">
+              <input type="text" name="username" placeholder="Choose a username">
+              <input type="text" name="password" placeholder="Choose a password">
+              <button type="submit">Join</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

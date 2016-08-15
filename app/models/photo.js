@@ -9,10 +9,10 @@ var mongoose = require('mongoose');
 //  -------------------------------
 var PhotoSchema = new mongoose.Schema({
   title: String,
-  photo: ???,
+  photo: String,
   userid: String
 });
 
 //  Declare photo as a model and attach schema
 //  ------------------------------------------
-module.exports = mongoose.model('Photo', ReviewSchema)
+module.exports = mongoose.model('Photo', PhotoSchema)
