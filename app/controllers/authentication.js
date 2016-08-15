@@ -1,6 +1,7 @@
 //  AUTHENTICATION CONTROLLER
 //  =========================
 
+
 //  Dependencies
 //  ------------
 var express = require('express'),
@@ -12,6 +13,7 @@ Authentication.route('/?')
   .get(function(req, res, next) {
     res.render('splash');
   })
+
 
 //  New user signup authentication
 //  ------------------------------
@@ -35,10 +37,11 @@ Authentication.route('/signup')
     })
   })
 
+
 //  Existing user login authentication
 //  ----------------------------------
 Authentication.route('/login')
-  //  POST - '/logout/' - accepts login credentials - allows user into app
+  //  POST - '/login/' - accepts login credentials - allows user into app
   .post(function(req, res, next) {
     UserModel.findOne({username: req.body.username}, function(error, user) {
       if (error || !user) {
@@ -59,7 +62,11 @@ Authentication.route('/login')
     })
   });
 
+
+//  User logout function
+//  --------------------
 Authentication.route('/logout')
+  //  GET - '/logout/' - logs out and goes back to splash page
   .get(function(req, res, next) {
     req.session.isLoggedIn = false;
     res.redirect('/');

@@ -10,18 +10,18 @@ var gulp = require('gulp'),
 //  Transpile LESS
 //  --------------
 gulp.task('less', function() {
-  gulp.src('./src/public/less/style.less')
+  gulp.src('./app/public/less/style.less')
     .pipe(less())
-    .pipe(gulp.dest('./src/public/css'));
+    .pipe(gulp.dest('./app/public/css'));
 });
 
 //  Run the local server
 //  --------------------
 gulp.task('server', function() {
-  var server = gls('./src/index.js', {NODE_ENV: 'development', PORT: 3000});
+  var server = gls('./app/server.js', {NODE_ENV: 'development', PORT: 3000});
   server.start();
 
-  gulp.watch(['gulpfile.js', './src/index.js', './src/{controllers,models}/**/*.js'], './src/views/**/*.hbs' function() {
+  gulp.watch(['gulpfile.js', './app/server.js', './app/{controllers,models}/**/*.js'], function() {
     server.start.bind(server)()
   });
 });
@@ -29,7 +29,7 @@ gulp.task('server', function() {
 //  Watch for file changes
 //  ----------------------
 gulp.task('watch', function() {
-  gulp.watch(['./src/public/less/**/*.less'], ['less']);
+  gulp.watch(['./app/public/less/**/*.less'], ['less']);
 });
 
 //  Default task
