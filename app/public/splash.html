@@ -34,8 +34,8 @@
           <div class="login-wrapper">
             <h3>LOGIN to begin your story...</h3>
               <form name="loginForm" ng-controller="loginController" ng-submit="login(username, password)">
-              <input type="text" ng-model="username" name="username" placeholder="username" value="">
-              <input type="text" ng-model="password" name="password" placeholder="password" value="">
+              <input type="text" ng-model="username" name="username" placeholder="username" value="" required>
+              <input type="text" ng-model="password" name="password" placeholder="password" value="" required>
               <button type="submit">Login</button>
             </form>
           </div>
@@ -50,11 +50,11 @@
             <h3>Not a member?</h3>
             <h3>SIGNUP!</h3>
             <form name="signupForm" ng-controller="signupController" ng-submit="signup(firstname, lastname, email, username, password)">
-              <input type="text" ng-model="firstname" name="firstname" placeholder="First name" value="">
-              <input type="text" ng-model="lastname" name="lastname" placeholder="Last name" value="">
-              <input type="email" ng-model="email" name="email" placeholder="Email address" value="">
-              <input type="text" ng-model="username" name="username" placeholder="Choose a username" value="">
-              <input type="password" ng-model="password" name="password" placeholder="Choose a password" value="">
+              <input type="text" ng-model="firstname" name="firstname" placeholder="First name" value="" required>
+              <input type="text" ng-model="lastname" name="lastname" placeholder="Last name" value="" required>
+              <input type="email" ng-model="email" name="email" placeholder="Email address" value="" required>
+              <input type="text" ng-model="username" name="username" placeholder="Choose a username" value="" required>
+              <input type="password" ng-model="password" name="password" placeholder="Choose a password" value="" required>
               <button type="submit">Join</button>
             </form>
           </div>

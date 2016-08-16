@@ -9,7 +9,7 @@ console.log('app.js is wired up');
 
   //  Set up the route provider
   //  -------------------------
-  app.config(['$routeProvider', function($routeProvider, $locationProvider) {
+  app.config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'splash.html',
@@ -19,7 +19,10 @@ console.log('app.js is wired up');
         templateUrl: '../users.html',
         controller: 'userController'
       });
-  }])
+
+      // $locationProvider.html5Mode(true);
+
+  });
 
 
   //  Master splash page (main page) functionality
@@ -42,8 +45,6 @@ console.log('app.js is wired up');
         console.log('Registered login.');
       });
     };
-
-    $locationProvider.html5Mode(true);
 
   });
 
@@ -86,7 +87,11 @@ console.log('app.js is wired up');
 
     $scope.loginvis = false;
     $scope.signupvis = false;
-
+    console.log('----------------------------------')
+    console.log($scope.loginvis)
+    console.log('----------------------------------')
+    console.log($scope.signupvis)
+    console.log('----------------------------------')
   });
 
 
