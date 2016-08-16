@@ -4,71 +4,30 @@
 <head>
   <title>story.u</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script type=""text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-route.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </head>
 
-<body ng-controller="testController">
+<body ng-controller="mainController">
+
+
+  <!-- For testing purposes only          -->
+  <!-- Delete when app is up and running! -->
+  <div class="row">
+    <div class="col-12">
+      <h3>{{mainMessage}}</h3>
+      <h3>{{reminderMessage}}</h3>
+    </div>
+  </div>
+
+
+
   <header></header>
 
   <main>
-    <div class="container">
-      
-      <!-- - - - - - - TITLE TEXT - - - - - - -->
-      <div class="row">
-        <div class="col-12">
-          <div class="title-text">
-            <h1>story.u</h1>
-          </div>
-        </div>
-      </div>
-
-      <!-- - - - - - - LOGO IMAGE - - - - - - -->
-      <div class="row">
-        <div class="col-12">
-          <img class="feather-square" src="/img/feather-square.png" />
-        </div>
-      </div>
-
-
-
-      <!-- - - - - - - LOGIN BLOCK - - - - - - -->
-      <div class="row">
-        <div class="col-12">
-          <div class="login-wrapper">
-            <h3>LOGIN to begin your story...</h3>
-              <form name="loginForm" ng-controller="loginController" novalidate>
-              <input type="text" name="username" placeholder="username">
-              <input type="text" name="password" placeholder="password">
-              <button type="submit">Login</button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- - - - - - - SIGNUP BLOCK - - - - - - -->
-      <div class="row">
-        <div class="col-12">
-          <div class="signup-wrapper">
-            <h3>Not a member?</h3>
-            <h3>SIGNUP!</h3>
-            <form name="signupForm" ng-controller="signupController" novalidate>
-              <input type="text" name="firstname" placeholder="First name">
-              <input type="text" name="lastname" placeholder="Last name">
-              <input type="email" name="email"  placeholder="Email address">
-              <input type="text" name="username" placeholder="Choose a username">
-              <input type="text" name="password" placeholder="Choose a password">
-              <button type="submit">Join</button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
+    <!-- VIEW INJECTION POINT --> 
+    <div ng-view></div>
   </main>
 
   <footer></footer>

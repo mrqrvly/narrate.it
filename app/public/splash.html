@@ -1,0 +1,77 @@
+<div class="container" ng-controller="splashController">
+      
+      <!-- TITLE TEXT -->
+      <div class="row">
+        <div class="col-12">
+          <div class="title-text">
+            <h1>story.u</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOGO IMAGE -->
+      <div class="row">
+        <div class="col-12">
+          <img class="feather-square" src="/img/feather-square.png" />
+        </div>
+      </div>
+
+
+      <!-- AUTHENTICATION SELECTOR                            -->
+      <!-- User selects either login or signup for an account -->
+      <div class="row">
+        <div class="col-12">
+          <div class="choice-wrapper">
+                  <h3><a href="#" ng-click="loginvis=true; signupvis=false">Login</a> or <a href="#" ng-click="signupvis=true; loginvis=false">Signup</a></h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOGIN BLOCK                        -->
+      <!-- Hidden until login link is clicked -->
+      <div class="row" ng-show="loginvis">
+        <div class="col-12">
+          <div class="login-wrapper">
+            <h3>LOGIN to begin your story...</h3>
+              <form name="loginForm" ng-controller="loginController" ng-submit="login(username, password)">
+              <input type="text" ng-model="username" name="username" placeholder="username" value="">
+              <input type="text" ng-model="password" name="password" placeholder="password" value="">
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIGNUP BLOCK                            -->
+      <!-- Hidden until the signup link is clicked -->
+      <div class="row" ng-show="signupvis">
+        <div class="col-12">
+          <div class="signup-wrapper">
+            <h3>Not a member?</h3>
+            <h3>SIGNUP!</h3>
+            <form name="signupForm" ng-controller="signupController" ng-submit="signup(firstname, lastname, email, username, password)">
+              <input type="text" ng-model="firstname" name="firstname" placeholder="First name" value="">
+              <input type="text" ng-model="lastname" name="lastname" placeholder="Last name" value="">
+              <input type="email" ng-model="email" name="email" placeholder="Email address" value="">
+              <input type="text" ng-model="username" name="username" placeholder="Choose a username" value="">
+              <input type="password" ng-model="password" name="password" placeholder="Choose a password" value="">
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEST LOGOUT FUNCTION             -->
+      <!-- Will be moved to user pages area -->
+      <div class="row">
+        <div class="col-12">
+          <div class="logout-wrapper">
+            <h3>LOGOUT TESTER</h3>
+            <form name="logoutForm" ng-controller="logoutController" ng-submit="logout()">
+              <button type="submit">TEST THE LOGOUT</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>

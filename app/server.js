@@ -9,7 +9,8 @@ var express    = require('express'),
     session    = require('express-session'),
     fs         = require('fs'),
     bodyParser = require('body-parser'),
-    passport   = require('passport');
+    passport   = require('passport'),
+    bcrypt     = require('bcrypt');
 
 
 //  Configures a user session
@@ -25,19 +26,27 @@ app.use(session({
 //  Serve static files
 //  ------------------
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 
 //  Find and linke up database
 //  --------------------------
 require('./db/database');
 
-var splash = require('./routes/index'),
-    users  = require('./routes/users');
+
+var index  = require('./routes/index'),
+    login  = require('./routes/login'),
+    signup = require('./routes/signup'),
+    logout = require('./routes/logout');
+
 
 //  Mount the controllers for use
 //  -----------------------------
-app.use('/?', splash);
-app.use('/users', users);
-
+app.use('/?', index);
+app.use('/login', login);
+app.use('/signup', signup);
+app.use('/logout', logout);
 
 
 //  Start the server and listen at local port

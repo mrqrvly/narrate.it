@@ -8,10 +8,11 @@ var mongoose = require('mongoose');
 //  Define the user resource model
 //  ------------------------------
 var UserSchema = new mongoose.Schema({
-  username: String,
-  password: String,
   firstName: String,
-  lastName: String
+  lastname: String,
+  email: String,
+  username: String,
+  password: String
 });
 
 //  Declare user model and attach schema
