@@ -9,30 +9,41 @@ console.log('app.js is wired up');
 
   //  Set up the route provider
   //  -------------------------
-  app.config(function($routeProvider) {
+  app.config(function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'splash.html',
-        controller: 'splashController'
+      })
+      .when('/login', {
+        templateUrl: 'users.html',
+        controller:  'loginController'
+      })
+      .when('/signup', {
+        templateUrl: 'signup.ejs',
+        controller:  'signupController'
       })
       .when('/users', {
-        templateUrl: '../users.html',
-        controller: 'userController'
+        templateUrl: 'users.ejs',
+        controller:  'userController'
       });
 
-      // $locationProvider.html5Mode(true);
+      $locationProvider.html5Mode(true);
 
   });
 
+  //  Control login or signup selector on splash page
+  //  -----------------------------------------------
+  app.controller('splashController', function($scope, $location) {
 
-  //  Master splash page (main page) functionality
-  //  --------------------------------------------
-  app.controller('mainController', function($scope) {
-    
-    $scope.mainMessage = 'You are on the main page...';
-    $scope.reminderMessage = 'Delete this when you get the router and views working!';
+    $scope.loginSelect = function(view) {
+      $location.path('/login');
+    };
 
-  });
+    $scope.signupSelect = function(view) {
+      $location.path('/signup');
+    };
+
+  })
 
   //  Controls the login form functionality
   //  --------------------------------------
@@ -79,19 +90,6 @@ console.log('app.js is wired up');
       console.log('Registered logout.')
     };
 
-  });
-
-
-
-  app.controller('splashController', function($scope) {
-
-    $scope.loginvis = false;
-    $scope.signupvis = false;
-    console.log('----------------------------------')
-    console.log($scope.loginvis)
-    console.log('----------------------------------')
-    console.log($scope.signupvis)
-    console.log('----------------------------------')
   });
 
 

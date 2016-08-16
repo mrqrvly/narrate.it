@@ -1,0 +1,14 @@
+      <!-- LOGIN BLOCK                        -->
+      <!-- Hidden until login link is clicked -->
+      <div class="row">
+        <div class="col-12">
+          <div class="login-wrapper">
+            <h3>LOGIN to begin your story...</h3>
+              <form name="loginForm" ng-controller="loginController" ng-submit="login(username, password)">
+              <input type="text" ng-model="username" name="username" placeholder="username" value="" required>
+              <input type="text" ng-model="password" name="password" placeholder="password" value="" required>
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
