@@ -1,6 +1,17 @@
 /**
  * Site-wide color scheme
  */
+.splash-surround {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #505050;
+}
+.splash-surround h2,
+.splash-surround h3 {
+  color: #505050;
+}
+.splash-page {
+  background-image: url();
+}
 .feather-square {
   width: 200px;
 }
@@ -278,6 +289,13 @@ embed {
 }
 img {
   height: auto;
+}
+.splash-surround {
+  width: 300px;
+}
+form {
+  text-align: center;
+  display: block;
 }
 /**
  * Global mixins

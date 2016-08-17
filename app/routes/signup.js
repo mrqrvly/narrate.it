@@ -18,7 +18,7 @@ signup.post('/', function(req, res, next) {
       } else {
         req.session.isLoggedIn = true;
         req.session.userID     = user._id;
-        res.send(req.body)
+        res.redirect('/users');
       };
     });
   });

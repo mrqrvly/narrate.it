@@ -1,10 +1,8 @@
       <!-- SIGNUP BLOCK                            -->
       <!-- Hidden until the signup link is clicked -->
-      <div class="row" ng-show="signupvis">
+      <div class="row">
         <div class="col-12">
           <div class="signup-wrapper">
-            <h3>Not a member?</h3>
-            <h3>SIGNUP!</h3>
             <form name="signupForm" ng-controller="signupController" ng-submit="signup(firstname, lastname, email, username, password)">
               <input type="text" ng-model="firstname" name="firstname" placeholder="First name" value="" required>
               <input type="text" ng-model="lastname" name="lastname" placeholder="Last name" value="" required>

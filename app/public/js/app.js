@@ -13,13 +13,14 @@ console.log('app.js is wired up');
     $routeProvider
       .when('/', {
         templateUrl: 'splash.html',
+        controller:  'splashController'
       })
       .when('/login', {
-        templateUrl: 'users.html',
+        templateUrl: 'userlogin.html',
         controller:  'loginController'
       })
       .when('/signup', {
-        templateUrl: 'signup.ejs',
+        templateUrl: 'usersignup.html',
         controller:  'signupController'
       })
       .when('/users', {
@@ -31,6 +32,8 @@ console.log('app.js is wired up');
 
   });
 
+
+
   //  Control login or signup selector on splash page
   //  -----------------------------------------------
   app.controller('splashController', function($scope, $location) {
@@ -41,6 +44,10 @@ console.log('app.js is wired up');
 
     $scope.signupSelect = function(view) {
       $location.path('/signup');
+    };
+
+    $scope.resetSelect = function(view) {
+      $location.path('/');
     };
 
   })

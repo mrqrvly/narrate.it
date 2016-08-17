@@ -14,9 +14,7 @@ login.post('/', function(req, res, next) {
           } else if (result) {
             req.session.isLoggedIn = true;
             req.session.userID = user._id;
-            console.log(req.session.userID);
-            console.log('Logged in: ' + req.session.isLoggedIn);
-            res.send(req.body);
+            res.redirect('/users');
           } else {
             res.send ('Wrong password!');
           };

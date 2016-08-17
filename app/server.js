@@ -38,18 +38,20 @@ app.use(bodyParser.urlencoded({extended: true}));
 require('./db/database');
 
 
-var index  = require('./routes/index'),
+var splash = require('./routes/splash'),
     login  = require('./routes/login'),
     signup = require('./routes/signup'),
-    logout = require('./routes/logout');
+    logout = require('./routes/logout'),
+    users  = require('./routes/users');
 
 
 //  Mount the controllers for use
 //  -----------------------------
-app.use('/?', index);
+app.use('/?', splash);
 app.use('/login', login);
 app.use('/signup', signup);
 app.use('/logout', logout);
+app.use('/users', users);
 
 
 //  Start the server and listen at local port
