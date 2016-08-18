@@ -38,20 +38,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 require('./db/database');
 
 
-var splash = require('./routes/splash'),
+//  Require routes to server-side http
+//  ----------------------------------
+var index = require('./routes/index'),
     login  = require('./routes/login'),
     signup = require('./routes/signup'),
-    logout = require('./routes/logout'),
-    users  = require('./routes/users');
+    savenote = require('./routes/savenote'),
+    logout = require('./routes/logout');
 
 
-//  Mount the controllers for use
-//  -----------------------------
-app.use('/?', splash);
+//  Map to the routes
+//  -----------------
+app.use('/?', index);
 app.use('/login', login);
 app.use('/signup', signup);
+app.use('/savenote', savenote);
 app.use('/logout', logout);
-app.use('/users', users);
 
 
 //  Start the server and listen at local port

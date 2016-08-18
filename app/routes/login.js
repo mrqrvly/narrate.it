@@ -13,14 +13,14 @@ login.post('/', function(req, res, next) {
             res.send ('ERROR: ' + err);
           } else if (result) {
             req.session.isLoggedIn = true;
-            req.session.userID = user._id;
-            res.redirect('/users');
+            req.session.userID = user._id; 
+            res.send(req.body);
           } else {
             res.send ('Wrong password!');
-          };
-        });
+          }
+        })
       };
     });
-})
+});
 
 module.exports = login;

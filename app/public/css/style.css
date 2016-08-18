@@ -2,18 +2,30 @@
  * Site-wide color scheme
  */
 .splash-surround {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid #505050;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 6px solid #B54848;
+  border-radius: 20px;
 }
 .splash-surround h2,
 .splash-surround h3 {
   color: #505050;
 }
-.splash-page {
-  background-image: url();
+header {
+  background-color: lightblue;
 }
-.feather-square {
+.splash-page {
+  background-image: url(../img/run.jpg);
+  background-size: cover;
+}
+.feather-square-splash {
   width: 200px;
+}
+.feather-square-nav {
+  width: 100px;
+}
+header button {
+  width: 50px;
+  height: 50px;
 }
 /**
  * Grid System
@@ -58,10 +70,8 @@
 .block-12 {
   display: block;
   position: relative;
-  float: left;
   width: 100%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-12:last-child,
 .block-12:last-child {
@@ -77,10 +87,8 @@
 .block-11 {
   display: block;
   position: relative;
-  float: left;
   width: 91.41666667%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-11:last-child,
 .block-11:last-child {
@@ -96,10 +104,8 @@
 .block-10 {
   display: block;
   position: relative;
-  float: left;
   width: 82.83333333%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-10:last-child,
 .block-10:last-child {
@@ -115,10 +121,8 @@
 .block-9 {
   display: block;
   position: relative;
-  float: left;
   width: 74.25%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-9:last-child,
 .block-9:last-child {
@@ -134,10 +138,8 @@
 .block-8 {
   display: block;
   position: relative;
-  float: left;
   width: 65.66666667%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-8:last-child,
 .block-8:last-child {
@@ -153,10 +155,8 @@
 .block-7 {
   display: block;
   position: relative;
-  float: left;
   width: 57.08333333%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-7:last-child,
 .block-7:last-child {
@@ -172,10 +172,8 @@
 .block-6 {
   display: block;
   position: relative;
-  float: left;
   width: 48.5%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-6:last-child,
 .block-6:last-child {
@@ -191,10 +189,8 @@
 .block-5 {
   display: block;
   position: relative;
-  float: left;
   width: 39.91666667%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-5:last-child,
 .block-5:last-child {
@@ -210,10 +206,8 @@
 .block-4 {
   display: block;
   position: relative;
-  float: left;
   width: 31.33333333%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-4:last-child,
 .block-4:last-child {
@@ -229,10 +223,8 @@
 .block-3 {
   display: block;
   position: relative;
-  float: left;
   width: 22.75%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-3:last-child,
 .block-3:last-child {
@@ -248,10 +240,8 @@
 .block-2 {
   display: block;
   position: relative;
-  float: left;
   width: 14.16666667%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-2:last-child,
 .block-2:last-child {
@@ -267,10 +257,8 @@
 .block-1 {
   display: block;
   position: relative;
-  float: left;
   width: 5.58333333%;
   margin-right: 3%;
-  text-align: center;
 }
 .col-1:last-child,
 .block-1:last-child {
@@ -290,12 +278,16 @@ embed {
 img {
   height: auto;
 }
-.splash-surround {
-  width: 300px;
-}
-form {
+form input,
+form button {
   text-align: center;
   display: block;
+}
+header nav ul {
+  list-style-type: none;
+}
+header nav ul li {
+  display: inline;
 }
 /**
  * Global mixins

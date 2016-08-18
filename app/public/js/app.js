@@ -1,19 +1,20 @@
-console.log('app.js is wired up');
-
-
-
 (function() {
+//  THIS PAGE INITIALIZES THE ANGULAR APP
+//  AND DEFINES THE VARIOUS CONTROLLERS
+//  =====================================
+  
+  //  Initializing the angular application
+  //  ------------------------------------
   var app = angular.module('storyu', ['ngRoute']);
 
 
-
-  //  Set up the route provider
-  //  -------------------------
+  //  Sets up the ROUTE PROVIDER and location finding
+  //  -----------------------------------------------
   app.config(function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'splash.html',
-        controller:  'splashController'
+        templateUrl: 'home.html',
+        controller:  'indexController'
       })
       .when('/login', {
         templateUrl: 'userlogin.html',
@@ -24,20 +25,25 @@ console.log('app.js is wired up');
         controller:  'signupController'
       })
       .when('/users', {
-        templateUrl: 'users.ejs',
-        controller:  'userController'
+        templateUrl: 'users.html',
+        controller:  'navController'
+      })
+      .when('/jotnote', {
+        templateUrl: 'note.html',
+        controller:  'noteController'
+      })
+      .when('/search', {
+        templateUrl: 'search.html',
+        controller:  'noteController'
       });
 
-      $locationProvider.html5Mode(true);
-
+    $locationProvider.html5Mode(true);
   });
 
 
-
-  //  Control login or signup selector on splash page
+  //  Control login or signup SELECTOR on SPLASH PAGE
   //  -----------------------------------------------
-  app.controller('splashController', function($scope, $location) {
-
+  app.controller('indexController', function($scope, $location) {
     $scope.loginSelect = function(view) {
       $location.path('/login');
     };
@@ -49,65 +55,110 @@ console.log('app.js is wired up');
     $scope.resetSelect = function(view) {
       $location.path('/');
     };
-
   })
 
-  //  Controls the login form functionality
-  //  --------------------------------------
-  app.controller('loginController', function($scope, $http) {
-    
-    $scope.login = function(username, password) {
-      $http.post('/login', {username: username, password: password}).success(function(data, status) {
-        console.log(data);
-        console.log('Status: ', status);
-        console.log('Registered login.');
-      });
-    };
+  app.controller('addController', function($scope, $http, $location) {
+    $scope.uploadtext = function(title, content) {
 
+    }
   });
 
 
-
-  //  Controls the signup form functionality
+  //  Controls the LOGIN FORM functionality
   //  --------------------------------------
-  app.controller('signupController', function($scope, $http) {
+  app.controller('loginController', function($scope, $http, $location) {
+    $scope.login = function(username, password) {
+      $http.post('/login', {username: username, password: password}).success(function(data, status) {
+        console.log('Status: ', status);
+        console.log('Registered login.');
+        $location.path('/users');
+      });
+    };
+  })
 
-    // $scope.fetch = function() {
-    //   $http.get('/signup').success(function(fromServer) {
-    //     console.log(fromServer);
-    //   });     
-    // };
+
+  //  Controls the SIGNUP FORM functionality
+  //  --------------------------------------
+  app.controller('signupController', function($scope, $http, $location) {
 
     $scope.signup = function(firstname, lastname, email, username, password) {
       $http.post('/signup', {firstname: firstname, lastname: lastname, email: email, username: username, password: password}).success(function(data, status) {
-        // $scope.fetch();
-        console.log(data);
         console.log('Status: ', status);
+        console.log('Registered a new user.'); 
+        $location.path('/users');
+      });
+    };
+  });
+
+
+  //  Controller for NAVIGATION section of USER PAGE
+  //  ----------------------------------------------
+  app.controller('navController', function($scope, $location) {
+    $scope.addnote = function(view) {
+      console.log('YOU PRESSED THE ADD BUTTON!');
+      $location.path('/jotnote');
+    };
+
+    $scope.search = function(view) {
+      console.log('YOU PRESSED THE SEARCH BUTTON!');
+      $location.path('/search');
+    };
+
+    $scope.logout = function(view) {
+      $http.post('/logout');
+      console.log('Registered logout.')
+      $location.path('/');
+    };
+  });
+
+
+  //  CRUD controller for all notes in user's collection
+  //  --------------------------------------------------
+  app.controller('noteController', function($scope, $location) {
+    $scope.notepost = function(title, content) {
+      $http.post('/savenote', {title: title, content: content}).success(function(data, status) {
+        console.log('Status: ', status);
+        console.log('Registered new note submission');
       });
     };
 
-  });
+    $scope.notesearch = function(searchcrit) {
 
-
-
-  app.controller('logoutController', function($scope, $http) {
-    
-    $scope.logout = function() {
-      $http.post('/logout');
-      console.log('Registered logout.')
     };
-
   });
 
 
 
-  app.controller('userController', function($scope, $http) {
 
-    $http.get('/login');
 
-    $scope.userMessage = 'You made it to the users page...';
-  
-  });
+
+  // app.controller('usersController', function($scope, $http) {
+
+  //   $scope.userLoad = function() {  
+  //     $http.get('/user').success(function(data, status) {
+  //       console.log('Status: ', status)
+  //       console.log('Got info for logged in user');
+  //     });
+  //   };
+
+  //   $scope.textEntry = function(title) {
+
+  //     $http.post('/textEntry').success(function(data, status) {
+  //       console.log('Registered text entry button click.');
+  //     });      
+  //   };
+
+  //   $scope.searchEntries = function() {
+  //     $http.get('/seach').success(function(data, status) {
+  //       console.log('Registered search attempt.');
+  //     });
+  //   };
+
+  //   $scope.userLoad();
+
+  // });
+
+
 
 
 

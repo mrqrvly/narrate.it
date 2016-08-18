@@ -65,10 +65,8 @@
   .col-@{i}, .block-@{i} {
     display: block;
     position: relative;
-    float: left;
     width: @width;
     margin-right: @gutter;
-    text-align: center;
 
     &:last-child {
       margin-right: 0;
@@ -114,11 +112,29 @@ img {
   height: auto;
 }
 
-.splash-surround {
-  width: 300px;
-}
+// .splash-surround {
+//   width: 300px;
+// }
 
 form {
-  text-align: center;
-  display: block;
+
+  input, button {
+    text-align: center;
+    display: block;
+  }
+}
+
+header {
+
+  .nav-bar {
+    // float: left;
+  }
+
+  nav ul {
+    list-style-type: none;
+
+    li {
+      display: inline;
+    }
+  }
 }

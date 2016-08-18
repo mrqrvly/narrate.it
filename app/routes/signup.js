@@ -14,13 +14,13 @@ signup.post('/', function(req, res, next) {
     }, function(err, user) {
       if (err) {
         console.log(err);
-        res.send('There was an error!')
+        res.send('There was an error!');
       } else {
         req.session.isLoggedIn = true;
         req.session.userID     = user._id;
-        res.redirect('/users');
-      };
-    });
+        res.send('signup worked');
+      }
+    })
   });
 });
 

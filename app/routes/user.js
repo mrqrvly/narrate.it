@@ -1,12 +1,11 @@
-var express  = require('express'),
-    users    = express.Router(),
-    User     = require('../models/user'),
-    validate = require('validate.js');
-
-users.get('/', function(req, res, next){
-  res.render('splash')
-})
+// var express   = require('express'),
+//     user      = express.Router(),
+//     UserModel = require('../models/user'),
+//     validate  = require('validate.js');
 
 
+// user.get('/', function(req, res, next){
+  
+// })
 
-module.exports = users;
+// module.exports = user;
