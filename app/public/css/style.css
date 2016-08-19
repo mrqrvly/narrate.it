@@ -2,18 +2,41 @@
  * Site-wide color scheme
  */
 .splash-surround {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(168, 154, 92, 0.3);
   border: 6px solid #B54848;
   border-radius: 20px;
 }
 .splash-surround h2,
 .splash-surround h3 {
-  color: #505050;
+  color: #767676;
 }
-header {
-  background-color: lightblue;
+.splash-surround a {
+  color: #ba6421;
 }
-.splash-page {
+.stories {
+  background-color: rgba(231, 222, 183, 0.8);
+  border: 3px solid #B54848;
+}
+.noteplate {
+  background-color: rgba(168, 154, 92, 0.4);
+  border: 2px solid #ba6421;
+  padding: 15px;
+  border-radius: 3px;
+}
+.note-form input {
+  width: 33%;
+}
+.note-form textarea {
+  width: 90%;
+}
+.user-form-element {
+  border: 1px solid #ba6421;
+  background-color: rgba(231, 222, 183, 0.8);
+  border-radius: 2px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+html {
   background-image: url(../img/run.jpg);
   background-size: cover;
 }
@@ -23,9 +46,8 @@ header {
 .feather-square-nav {
   width: 100px;
 }
-header button {
-  width: 50px;
-  height: 50px;
+header li {
+  margin-left: 20px;
 }
 /**
  * Grid System
@@ -43,7 +65,6 @@ header button {
   width: 100%;
   max-width: 1140px;
   min-width: 755px;
-  margin: 0 auto;
   padding: 0.5rem 0;
   overflow: hidden;
   *zoom: 1;
@@ -278,16 +299,63 @@ embed {
 img {
   height: auto;
 }
-form input,
-form button {
-  text-align: center;
-  display: block;
+.view-frame {
+  margin: 15px;
 }
-header nav ul {
+.splash-page {
+  text-align: center;
+}
+.splash-surround {
+  width: 300px;
+  margin: 30px auto;
+  padding-top: 10px;
+}
+.splash-surround input,
+.splash-surround button {
+  display: block;
+  margin: auto;
+  margin-bottom: 4px;
+  border-radius: 3px;
+  padding: 3px;
+}
+.splash-surround .splash-element-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header .nav-left {
+  float: left;
+}
+header .nav-right {
+  float: right;
+}
+header nav {
   list-style-type: none;
+  margin-top: 42px;
 }
 header nav ul li {
   display: inline;
+}
+.stories-wrapper {
+  clear: both;
+}
+.stories-wrapper .stories {
+  margin: 0;
+  border-radius: 5px;
+  padding: 20px;
+}
+.stories-wrapper .story-left {
+  float: left;
+  width: 49%;
+  margin-top: 30px;
+}
+.stories-wrapper .story-right {
+  float: right;
+  width: 49%;
+  margin-top: 30px;
+}
+.stories-wrapper .note-list {
+  list-style-type: none;
+  margin: 0;
 }
 /**
  * Global mixins
@@ -346,7 +414,7 @@ dl dt {
 dl.faq dt {
   font-size: 1.414rem;
   line-height: 1.999396rem;
-  font-family: Georgia, 'Times New Roman', serif !important;
+  font-family: 'Helvetica Neue', 'Times New Roman', serif !important;
 }
 dl.faq dd {
   font-size: 1rem;
@@ -360,7 +428,7 @@ h4,
 h5,
 h6 {
   /* Change heading typefaces here */
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', serif;
   font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: 0;
@@ -446,7 +514,7 @@ strong em {
   font-family: 'Helvetica Neue', Helvetica, 'Lucida Grande', Verdana, sans-serif;
 }
 .serif {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', serif;
 }
 .centered-text {
   text-align: center;

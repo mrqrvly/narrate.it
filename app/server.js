@@ -40,11 +40,12 @@ require('./db/database');
 
 //  Require routes to server-side http
 //  ----------------------------------
-var index = require('./routes/index'),
-    login  = require('./routes/login'),
-    signup = require('./routes/signup'),
-    savenote = require('./routes/savenote'),
-    logout = require('./routes/logout');
+var index    = require('./routes/index'),
+    login    = require('./routes/login'),
+    signup   = require('./routes/signup'),
+    notes    = require('./routes/notes'),
+    features = require('./routes/features'),
+    logout   = require('./routes/logout');
 
 
 //  Map to the routes
@@ -52,7 +53,8 @@ var index = require('./routes/index'),
 app.use('/?', index);
 app.use('/login', login);
 app.use('/signup', signup);
-app.use('/savenote', savenote);
+app.use('/notes', notes);
+app.use('/features', features);
 app.use('/logout', logout);
 
 

@@ -27,15 +27,46 @@
 @vlink-color:     @link-color;
 
 .splash-surround {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(168, 154, 92, .3);
   border: 6px solid #B54848;
   border-radius: 20px;
   h2, h3 {
-    color: @body-color;
+    color: darken(darkgrey, 20%);
+  }
+  a {
+    color: @hlink-color;
   }
   
 }
 
-header {
-  background-color: lightblue;
+
+.stories {
+  background-color: rgba(231, 222, 183, .8);
+  border: 3px solid #B54848;
+}
+
+.noteplate {
+  background-color: rgba(168, 154, 92, .4);
+  border: 2px solid @hlink-color;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.note-form {
+
+  input {
+    width: 33%;
+  }
+
+  textarea {
+    width: 90%;
+  }
+}
+
+.user-form-element {
+  border: 1px solid @hlink-color;
+  background-color: rgba(231, 222, 183, .8);
+  border-radius: 2px;
+  margin-top: 5px;
+  font-size: 14px;
 }

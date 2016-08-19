@@ -1,0 +1,29 @@
+<div ng-controller="navController" class="stories-wrapper">
+  <div class="story-left">
+    <h3>What happened:</h3> 
+    <div class="stories">
+      <div>  
+        <h4><strong>{{feature.title}}</strong></h4>
+        <p>{{feature.content}}</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="story-right">
+      <h3>Notes:</h3>
+      <div class="stories">
+        <ul class="note-list">
+          <li ng-repeat="usernote in usernotes">
+            <div>
+              <a href="#" ng-click="showfeature(usernote._id)">
+                <div class="noteplate">
+                  <p><em>{{usernote.title}}</em></p>
+                </div>
+              </a>
+            </div>
+            <br>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

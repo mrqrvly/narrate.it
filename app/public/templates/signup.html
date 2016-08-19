@@ -1,16 +1,12 @@
-      <!-- SIGNUP BLOCK                            -->
-      <!-- Hidden until the signup link is clicked -->
-      <div class="row">
-        <div class="col-12">
-          <div class="signup-wrapper">
-            <form name="signupForm" ng-controller="signupController" ng-submit="signup(firstname, lastname, email, username, password)">
-              <input type="text" ng-model="firstname" name="firstname" placeholder="First name" value="" required>
-              <input type="text" ng-model="lastname" name="lastname" placeholder="Last name" value="" required>
-              <input type="email" ng-model="email" name="email" placeholder="Email address" value="" required>
-              <input type="text" ng-model="username" name="username" placeholder="Choose a username" value="" required>
-              <input type="password" ng-model="password" name="password" placeholder="Choose a password" value="" required>
-              <button type="submit">Join</button>
-            </form>
-          </div>
-        </div>
-      </div>
+<!-- SIGNUP BLOCK                            -->
+<!-- Hidden until the signup link is clicked -->
+<div class="splash-element-wrapper">
+  <form name="signupForm" ng-controller="signupController" ng-submit="signup(firstname, lastname, email, username, password)">
+    <input class="splash-form" type="text" ng-model="firstname" name="firstname" placeholder="First name" value="" required>
+    <input class="splash-form" type="text" ng-model="lastname" name="lastname" placeholder="Last name" value="" required>
+    <input class="splash-form" type="email" ng-model="email" name="email" placeholder="Email address" value="" required>
+    <input class="splash-form" type="text" ng-model="username" name="username" placeholder="Choose a username" value="" required>
+    <input class="splash-form" type="password" ng-model="password" name="password" placeholder="Choose a password" value="" required>
+    <button class="splash-form" type="submit">Join</button>
+  </form>
+</div>

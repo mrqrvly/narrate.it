@@ -1,8 +1,10 @@
+<!-- CONTENT SEARCH PARTIAL                -->
+<!-- Visible when selected from header nav -->
 <div>
   <div class="row">
     <div class="col-12">
-      <form name="search" ng-controller="noteController">
-        <input type="text" ng-model="title" name="title" placeholder="Search your stories..." value="" required>
+      <form name="search" ng-controller="navController">
+        <input class="user-form-element" type="text" ng-model="title" name="title" placeholder="Search your stories..." value="" required>
         <button type="submit">Search</button>
       </form>
       </div>

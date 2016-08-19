@@ -1,35 +1,36 @@
+<!-- HEADER VIEW PARTIAL                 -->
+<!-- Only seen after accessing user area -->
+<!-- Contains user navigation links      -->
 <div ng-controller="navController">
   <header>
-    <div class="row">
-      <div class="col-1 nav-bar">
+    <div class="nav-left">
+      <a href="#" ng-click="fetchnotes()">
         <img class="feather-square-nav" src="/img/feather-square.png">
-      </div>
+      </a>
+    </div>
 
-      <div class="col-7 nav-bar">
-        <p>Empty Space</p>
-      </div>
+    <div class="nav-right">
+      <nav>
+        <ul>
+          <li>
+            <a href="#" ng-click="addnote()">
+              <img src="/img/note.png">
+            </a>
+          </li>
 
-      <div class="col-4 nav-bar">
-        <nav>
-          <ul>
-            <li>
-              <a href="#" ng-click="addnote()">
-                <button>ADD</button>
-              </a>
-            </li>
-            <li>
-              <a href="#" ng-click="search()">
-                <button>SEARCH</button>
-              </a>
-            </li>
-            <li>
-              <a href="#" ng-click="logout()">
-                <button>LOGOUT</button>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>    
+          <li>
+            <a href="#" ng-click="search()">
+              <img src="/img/search.png">
+            </a>
+          </li>
+          
+          <li>
+            <a href="#" ng-click="logout()">
+              <img src="/img/logout.png">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 </div>

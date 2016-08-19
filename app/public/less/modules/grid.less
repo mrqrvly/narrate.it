@@ -33,7 +33,7 @@
   width: 100%;
   max-width: @max-width;
   min-width: @min-width;
-  margin: 0 auto;
+  // margin: 0 auto;
   padding: 0.5rem 0; // Containers have padding so rows don't need them
   overflow: hidden;
   .clearfix;
@@ -112,29 +112,94 @@ img {
   height: auto;
 }
 
-// .splash-surround {
-//   width: 300px;
-// }
 
-form {
+.view-frame {
+  margin: 15px;
+}
+
+
+// FOR CENTERING ON SPLASH PAGE
+// ----------------------------
+.splash-page {
+  text-align: center;
+}
+
+
+// FOR ELEMENTS WITHIN THE LOGO AREA ON SPLASH
+// -------------------------------------------
+.splash-surround {
+  width: 300px;
+  margin: 30px auto;
+  padding-top: 10px;
 
   input, button {
-    text-align: center;
     display: block;
+    margin: auto;
+    margin-bottom: 4px;
+    border-radius: 3px;
+    padding: 3px;
+  }
+
+  .splash-element-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
 
+
+
+// HEADER STYLE
+// ------------
 header {
 
-  .nav-bar {
-    // float: left;
+  .nav-left {
+    float: left;
   }
 
-  nav ul {
-    list-style-type: none;
+  .nav-right {
+    float: right;
+  }
 
-    li {
+  nav {
+    list-style-type: none;
+    margin-top: 42px;
+
+    ul li {
       display: inline;
-    }
+    }    
+  }  
+}
+
+
+
+// READING PANEL AND STORY LIST PANEL
+// ----------------------------------
+.stories-wrapper {
+  clear: both;
+
+  .stories {
+    margin: 0;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  .story-left {
+    float: left;
+    width: 49%;
+    margin-top: 30px;
+  }
+
+  .story-right {
+    float: right;
+    width: 49%;
+    margin-top: 30px;
+  }
+
+  .note-list {
+    list-style-type: none;
+    margin: 0;
   }
 }
+
+
+

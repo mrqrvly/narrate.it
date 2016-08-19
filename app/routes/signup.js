@@ -1,11 +1,11 @@
 var express   = require('express'),
     signup    = express.Router(),
-    User      = require('../models/user'),
+    UserModel = require('../models/user'),
     bcrypt    = require('bcrypt');
 
 signup.post('/', function(req, res, next) {
   bcrypt.hash(req.body.password, 10, function(err, hash) {
-    User.create({
+    UserModel.create({
       firstname: req.body.firstname,
       lastname:  req.body.lastname,
       email:     req.body.email,

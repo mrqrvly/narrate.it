@@ -1,34 +1,29 @@
+<!-- BASIC SPLASH PAGE VIEW              -->
+<!-- Can select between login and signup -->
 <div ng-controller="indexController">
-  <!-- TITLE TEXT -->
-  <div class="row">
-    <div class="col-12">
-        <div class="splash-wrapper">
-      <div class="title-text">
-        <a href="#" ng-click="resetSelect()"><h2>story.u</h2></a>
-      </div>
-        </div>
+
+  <!-- TITLE TEXT -->  
+  <div class="splash-element-wrapper">
+    <div>
+      <a href="#" ng-click="resetSelect()">
+        <h2>story.u</h2>
+      </a>
     </div>
   </div>
   
 
   <!-- LOGO IMAGE -->
-  <div class="row">
-    <div class="col-12">
-        <div class="splash-wrapper">
-          <a href="#" ng-click="resetSelect()"><img class="feather-square-splash" src="/img/feather-square.png" /></a>
-        </div>
-    </div>
+  <div class="splash-element-wrapper">
+    <a href="#" ng-click="resetSelect()">
+      <img class="feather-square-splash" src="/img/feather-square.png" />
+    </a>
   </div>
 
 
   <!-- AUTHENTICATION SELECTOR                            -->
-  <!-- User selects either login or signup for an account -->
-  <div class="row">
-    <div class="col-12">
-      <div class="choice-wrapper">
-        <h3><a href="#" ng-click="loginSelect()">Login</a> or <a href="#" ng-click="signupSelect()">Signup</a></h3>
-      </div>
-    </div>
+  <!-- User selects either login or signup for an account -->  
+  <div class="splash-element-wrapper">
+    <h3><a href="#" ng-click="loginSelect()">Login</a> or <a href="#" ng-click="signupSelect()">Signup</h3></a>
   </div>
-</div>
 
+</div>
