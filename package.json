@@ -4,7 +4,7 @@
   "description": "creative writing aid that helps construct narratives from fragmentary or episodic writings",
   "main": "server.js",
   "scripts": {
-    "start": "npm start"
+    "start": "node app/server.js"
   },
   "keywords": [
     "creative",
