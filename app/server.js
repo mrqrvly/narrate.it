@@ -60,6 +60,12 @@ app.use('/logout', logout);
 
 //  Start the server and listen at local port
 //  -----------------------------------------
-var server = app.listen(process.env.PORT || 3000, function() {
-  console.log('Server listening at http://localhost:' + server.address().port);
+// var server = app.listen(process.env.PORT || 3000, function() {
+//   console.log('Server listening at http://localhost:' + server.address().port);
+// });
+
+var port = process.env.PORT || 8080;
+
+app.listen(port, function() {
+  console.log('Server listening at http://localhost: ' + port);
 });

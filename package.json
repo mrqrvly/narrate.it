@@ -4,7 +4,7 @@
   "description": "creative writing aid that helps construct narratives from fragmentary or episodic writings",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app/server.js"
   },
   "keywords": [
     "creative",
@@ -28,5 +28,8 @@
     "express": "^4.14.0",
     "express-session": "^1.14.0",
     "fs": "0.0.2"
+  },
+  "engines": {
+    "node": "6.2.0"
   }
 }
