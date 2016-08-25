@@ -2,7 +2,7 @@
   "name": "story.u",
   "version": "0.0.1",
   "description": "creative writing aid that helps construct narratives from fragmentary or episodic writings",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node app/server.js"
   },
