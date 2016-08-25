@@ -10,7 +10,6 @@ var express    = require('express'),
     fs         = require('fs'),
     bodyParser = require('body-parser'),
     path       = require('path'),
-    passport   = require('passport'),
     bcrypt     = require('bcrypt');
 
 
