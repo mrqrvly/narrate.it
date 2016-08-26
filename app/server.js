@@ -1,6 +1,8 @@
 //  LOCAL SERVER FILE
 //  =================
 
+//  Indicate that dotenv is in use
+Require('dotenv').config({ silent: true});
 
 //  Dependencies
 //  ------------
