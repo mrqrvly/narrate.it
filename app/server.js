@@ -2,7 +2,7 @@
 //  =================
 
 //  Indicate that dotenv is in use
-Require('dotenv').config({ silent: true});
+require('dotenv').config({silent: true});
 
 //  Dependencies
 //  ------------
